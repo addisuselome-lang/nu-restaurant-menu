@@ -1,10 +1,7 @@
 const crypto = require('crypto');
 const fs = require('fs/promises');
 const path = require('path');
-const express = require('express');const path = require('path');
-
-// 'menu-images' ፎልደር ውስጥ ያሉትን ፎቶዎች ለህዝብ ክፍት ለማድረግ፦
-app.use('/menu-images', express.static(path.join(__dirname, 'menu-images')));
+const express = require('express');
 const cors = require('cors');
 const multer = require('multer');
 const bcrypt = require('bcrypt');

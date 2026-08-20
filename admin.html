@@ -70,57 +70,6 @@
         class="w-full bg-gradient-to-r from-amber-500 to-terracotta-500 hover:from-amber-600 hover:to-terracotta-600 text-white font-extrabold py-3 rounded-xl transition active:scale-95 flex items-center justify-center gap-2 shadow-md">
         <i class="fa-solid fa-right-to-bracket"></i> Sign In
       </button>
-      <div class="flex items-center justify-between text-[11px] text-gray-500 pt-1">
-        <button type="button" onclick="showAuthPane('signup')" class="font-semibold text-sage-700 hover:text-sage-900">Create account</button>
-        <button type="button" onclick="showAuthPane('forgot')" class="font-semibold text-sage-700 hover:text-sage-900">Forgot password?</button>
-      </div>
-      <div id="signupPane" class="hidden space-y-3 pt-3 border-t border-gray-100">
-        <div class="space-y-1">
-          <label class="text-xs font-bold text-gray-500 uppercase tracking-wider">Admin email</label>
-          <input id="signupEmail" type="email" placeholder="your-email@example.com" class="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm bg-gray-50 focus:ring-2 focus:ring-terracotta-500 focus:border-terracotta-500 transition">
-        </div>
-        <button onclick="sendSignupOtp()" class="w-full bg-sage-800 hover:bg-sage-900 text-white font-bold py-2.5 rounded-xl transition">Send OTP</button>
-        <div class="space-y-1">
-          <label class="text-xs font-bold text-gray-500 uppercase tracking-wider">OTP</label>
-          <input id="signupOtp" type="text" maxlength="6" placeholder="123456" class="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm bg-gray-50 focus:ring-2 focus:ring-terracotta-500 focus:border-terracotta-500 transition">
-        </div>
-        <button onclick="verifySignupOtp()" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-2.5 rounded-xl transition">Verify OTP</button>
-        <div id="signupSetup" class="hidden space-y-3">
-          <div class="space-y-1">
-            <label class="text-xs font-bold text-gray-500 uppercase tracking-wider">Username</label>
-            <input id="signupUsername" type="text" placeholder="admin_name" class="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm bg-gray-50 focus:ring-2 focus:ring-terracotta-500 focus:border-terracotta-500 transition">
-          </div>
-          <div class="space-y-1">
-            <label class="text-xs font-bold text-gray-500 uppercase tracking-wider">Password</label>
-            <input id="signupPassword" type="password" placeholder="••••••••" class="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm bg-gray-50 focus:ring-2 focus:ring-terracotta-500 focus:border-terracotta-500 transition">
-          </div>
-          <div class="space-y-1">
-            <label class="text-xs font-bold text-gray-500 uppercase tracking-wider">Confirm Password</label>
-            <input id="signupConfirmPassword" type="password" placeholder="••••••••" class="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm bg-gray-50 focus:ring-2 focus:ring-terracotta-500 focus:border-terracotta-500 transition">
-          </div>
-          <button onclick="completeSignup()" class="w-full bg-gradient-to-r from-amber-500 to-terracotta-500 hover:from-amber-600 hover:to-terracotta-600 text-white font-extrabold py-2.5 rounded-xl transition">Create Admin Account</button>
-        </div>
-      </div>
-      <div id="forgotPane" class="hidden space-y-3 pt-3 border-t border-gray-100">
-        <div class="space-y-1">
-          <label class="text-xs font-bold text-gray-500 uppercase tracking-wider">Registered email</label>
-          <input id="resetEmail" type="email" placeholder="your-email@example.com" class="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm bg-gray-50 focus:ring-2 focus:ring-terracotta-500 focus:border-terracotta-500 transition">
-        </div>
-        <button onclick="sendResetOtp()" class="w-full bg-sage-800 hover:bg-sage-900 text-white font-bold py-2.5 rounded-xl transition">Send reset OTP</button>
-        <div class="space-y-1">
-          <label class="text-xs font-bold text-gray-500 uppercase tracking-wider">Reset OTP</label>
-          <input id="resetOtp" type="text" maxlength="6" placeholder="123456" class="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm bg-gray-50 focus:ring-2 focus:ring-terracotta-500 focus:border-terracotta-500 transition">
-        </div>
-        <div class="space-y-1">
-          <label class="text-xs font-bold text-gray-500 uppercase tracking-wider">New password</label>
-          <input id="resetPassword" type="password" placeholder="••••••••" class="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm bg-gray-50 focus:ring-2 focus:ring-terracotta-500 focus:border-terracotta-500 transition">
-        </div>
-        <div class="space-y-1">
-          <label class="text-xs font-bold text-gray-500 uppercase tracking-wider">Confirm new password</label>
-          <input id="resetConfirmPassword" type="password" placeholder="••••••••" class="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm bg-gray-50 focus:ring-2 focus:ring-terracotta-500 focus:border-terracotta-500 transition">
-        </div>
-        <button onclick="resetAdminPasswordFlow()" class="w-full bg-gradient-to-r from-amber-500 to-terracotta-500 hover:from-amber-600 hover:to-terracotta-600 text-white font-extrabold py-2.5 rounded-xl transition">Reset password</button>
-      </div>
       <div class="text-center pt-1">
         <a href="index.html" class="text-xs text-gray-400 hover:text-gray-600 flex items-center justify-center gap-1">
           <i class="fa-solid fa-arrow-left text-xs"></i> Back to Menu

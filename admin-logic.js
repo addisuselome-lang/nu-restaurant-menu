@@ -89,11 +89,5 @@ function togglePassword(fieldId, button) { const field = document.getElementById
 function switchTab(name) { document.querySelectorAll('.tab-pane').forEach((pane) => pane.classList.remove('active')); document.querySelectorAll('.tab-btn').forEach((button) => button.classList.remove('active')); document.getElementById(`tab-${name}`)?.classList.add('active'); document.getElementById(`tab-${name}-btn`)?.classList.add('active'); if (name === 'categories') renderCatsGrid(); if (name === 'payment') renderPaymentGrid(); }
 function showToast(message, isError = false) { const toast = document.getElementById('toast'); document.getElementById('toastMsg').textContent = message; document.getElementById('toastIcon').style.color = isError ? '#f87171' : '#34d399'; toast.style.display = 'flex'; clearTimeout(toast._timer); toast._timer = setTimeout(() => { toast.style.display = 'none'; }, 3000); }
 function doLogout() { localStorage.removeItem(TOKEN_KEY); document.getElementById('appScreen').style.display = 'none'; document.getElementById('loginScreen').style.display = 'flex'; }
-function showAuthPane() {}
-function sendSignupOtp() { showLoginError('Account creation is disabled. Use the seeded admin account.'); }
-function verifySignupOtp() { showLoginError('Account creation is disabled.'); }
-function completeSignup() { showLoginError('Account creation is disabled.'); }
-function sendResetOtp() { showLoginError('Use the Settings tab to change your password.'); }
-function resetAdminPasswordFlow() { showLoginError('Use the Settings tab to change your password.'); }
 
 window.addEventListener('DOMContentLoaded', () => { populateCategorySelect(); if (token()) { showApp('admin'); } });
