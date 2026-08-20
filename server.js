@@ -1,7 +1,10 @@
 const crypto = require('crypto');
 const fs = require('fs/promises');
 const path = require('path');
-const express = require('express');
+const express = require('express');const path = require('path');
+
+// 'menu-images' ፎልደር ውስጥ ያሉትን ፎቶዎች ለህዝብ ክፍት ለማድረግ፦
+app.use('/menu-images', express.static(path.join(__dirname, 'menu-images')));
 const cors = require('cors');
 const multer = require('multer');
 const bcrypt = require('bcrypt');
@@ -25,7 +28,7 @@ app.use(cors({ origin: allowedOrigins.includes('*') ? true : allowedOrigins }));
 app.use(express.json({ limit: '1mb' }));
 app.use(express.static(__dirname));
 app.use('/uploads', express.static(uploadDirectory));
-
+app.use('/menu-images', express.static(path.join(__dirname, 'menu-images')));
 const storage = multer.diskStorage({
   destination: (_request, _file, callback) => callback(null, uploadDirectory),
   filename: (_request, file, callback) => {
